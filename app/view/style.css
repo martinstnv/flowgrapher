@@ -1,0 +1,145 @@
+/* scrollbar styling */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #272b30;
+}
+
+::-webkit-scrollbar-thumb {
+  background: steelblue;
+  border-radius: 1ex;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: dodgerblue;
+}
+
+::-webkit-scrollbar-corner {
+  background: #272b30;
+}
+
+/* Global style */
+
+* {
+  outline-color: dodgerblue;
+}
+
+body {
+  margin: 0px;
+  background-color: #1d2024;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #a1a1a1;
+}
+
+/* implementing grid layout */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas: 'hd hd' 'nv nv' 'src tv';
+  grid-auto-rows: auto;
+}
+
+.header {
+  background-color: #272b30;
+  grid-area: hd;
+  justify-content: space-between;
+  padding: 20px;
+  /* padding: 0px 20px 10px 20px; */
+}
+
+.navbar {
+  background-color: #2f3338;
+  grid-area: nv;
+}
+
+.source-wrapper {
+  grid-area: src;
+  margin: 20px;
+  padding: unset;
+  overflow: scroll;
+}
+
+.network-wrapper {
+  grid-area: tv;
+  margin: 20px 20px 20px 0px;
+  background-color: #272b30;
+  padding: 20px;
+}
+
+/* element styling */
+
+.vis-network {
+  width: 100%;
+  height: 100%;
+  border: 1px solid steelblue;
+}
+
+button {
+  margin: 20px 0px 20px 20px;
+  height: 35px;
+  width: 140px;
+  color: #272b30;
+  font-weight: bold;
+  background-color: steelblue;
+  border: none;
+}
+
+button:hover {
+  box-shadow: dodgerblue 0px 0px 3px;
+}
+
+pre {
+  margin: 0px;
+}
+
+a:link {
+  color: steelblue;
+} 
+
+a:visited {
+  color: slategrey;
+}
+
+a:hover {
+  color: cornflowerblue;
+}
+
+a:active {
+  color: dodgerblue;
+}
+
+/* Extra small devices (phones, 660px and down) */
+@media only screen and (max-width: 680px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'hd' 'nv' 'src' 'tv';
+    grid-auto-rows: auto auto 50vh 50vh auto;
+  }
+  .network-wrapper {
+    margin: 20px 20px 20px 20px;
+  }
+  .header {
+    display: flex;
+    text-align: center;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .navbar > button {
+    margin: 0px;
+    width: 100vw;
+    border: #272b30 .1vh solid;
+  }
+}
+
+/* Extra large display (laptop/desktop, 1920px and up) */
+@media only screen and (min-width: 1200px) {
+  .grid {
+    grid-auto-rows: 10vh 10vh 80vh;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Flow Visualizer</title>
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="../controller/controller.js" defer></script>
+
+    <!-- Prism JS -->
+    <link rel="stylesheet" href="../../plugins/prism/prism.css" />
+    <script src="../../plugins/prism/prism.js"></script>
+
+    <!-- Vis JS -->
+    <script src="../../plugins/vis-network/vis-network.min.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Grid layout -->
+    <div class="grid">
+
+      <!-- Header -->
+      <div class="header">
+        <h2>Code Flow Visualizer</h2>
+      </div>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <button id="start-btn">Start</button>
+        <button id="exp-paths">Export</button>
+        <button id="close-btn">Close</button>
+      </div>
+
+      <!-- Code -->
+      <div class="source-wrapper">
+        <pre data-src="../../resources/content/example.js"></pre>
+      </div>
+
+      <!-- Treeview -->
+      <div class="network-wrapper">
+        <div class="vis-network" id="mynetwork"></div>
+      </div>
+
+    </div>
+    <!-- End of grid -->
+  </body>
+</html>

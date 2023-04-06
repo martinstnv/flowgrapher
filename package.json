@@ -1,0 +1,13 @@
+{
+    "name": "code-flow-visualizer",
+    "version": "1.0.0",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^7.1.7",
+        "jest": "^25.3.0"
+    },
+    "scripts": {
+        "start": "electron .",
+        "test": "jest"
+    }
+}

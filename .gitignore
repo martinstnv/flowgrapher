@@ -1,0 +1,16 @@
+# Generated API definitions
+electron-api.json
+electron.d.ts
+
+# dependencies
+node_modules/
+
+# package-lock files
+package-lock.json
+package-lock.json
+
+# debug
+npm-debug.log*
+
+# environment variables
+.env
